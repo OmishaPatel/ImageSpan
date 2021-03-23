@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background:#333;
+    color:#fff;
+    font-family: 'Yusei Magic', sans-serif;
+}
+h2 {
+    font-size:2rem;
+    font-weight: 300;
+    margin:0.8rem;
+}
+p {
+    font-size:1.3rem;
+}
+.container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:0.8rem;
+}
+
+.container > div {
+    cursor: pointer;
+    height:14rem;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease-in;
+}
+.container > div:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+.container > div:nth-of-type(1) {
+    grid-column: 1/3;
+}
+.container > div:nth-of-type(6) {
+    grid-column: 3/5;
+}
+.container > div:nth-of-type(9) {
+    grid-column: 3/5;
+}
+.container > div:nth-of-type(10) {
+    grid-column: 1/3;
+}
+.bg1 {
+    background: url('bg2.jpg');  
+}
+.bg2 {
+    background: url('bg1.jpg');
+}
+@media(max-width:560px) {
+    h2 {
+        font-size:1.1rem;
+        margin:0.4rem;
+    }
+    p {
+        font-size:0.8rem;
+    }
+    .container {
+        gap:0.6rem;
+    }
+    
+    .container > div {
+        height:14rem;
+    }
+}
+/* In this project i am using css grid to span two images through multiple elements. The background-attachment: fixed property is used here to achieve the effect. This project is based on a tutorial by Brad Traversy.
